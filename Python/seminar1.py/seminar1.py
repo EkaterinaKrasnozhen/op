@@ -1,10 +1,12 @@
-#Найти максимальное из пяти чисел.
-from re import A
+#Задача 2: Найти максимальное из пяти чисел.
+nums = [1,3,4,51,6]
 
-
-a = 3
-b = 4
-c = 6
-d = 7
-e = 9
-max = a
+def max_num(numbers):
+    max = numbers[0]
+    index = 0
+    for e in numbers:
+        if (numbers[index]>max):
+             max = numbers[index]
+        index+=1
+    return max
+print(max_num(nums))
