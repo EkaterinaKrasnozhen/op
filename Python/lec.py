@@ -149,15 +149,42 @@
 # print (text)
 
 #списки
-numbers = [1,2,3,4,5]
-print(numbers)
-ran = range(1,8)
-numbers = list(ran) #приведение типа range к типу list
-print(numbers)
-numbers[0] = 10
-print(f'{len(numbers)} len')
-print(numbers)
-for i in numbers:
-    i*=2
-    print(i) # печатаем результат умножения
-print (numbers)
+# numbers = [1,2,3,4,5]
+# print(numbers)
+# ran = range(1,8)
+# numbers = list(ran) #приведение типа range к типу list
+# print(numbers)
+# numbers[0] = 10
+# print(f'{len(numbers)} len')
+# print(numbers)
+# for i in numbers:
+#     i*=2
+#     print(i) # печатаем результат умножения
+# print (numbers)
+
+#списки добавление и удаление
+# colors = ['red', 'green', 'blue']
+# for e in colors:
+#     print(e) #печатаем список
+
+# for e in colors:
+#     print(e*2) # redred greengreen
+
+# colors.append('grey') #добавляем в конец списка
+# print(colors == ['red', 'green', 'blue', 'grey']) #True
+# colors.remove('red')
+# print(colors)
+# del colors[0]
+# print(colors)
+
+# методы,функции
+def f(x):
+    if x ==1:
+        return 'целое'
+    elif x ==2.3:
+        return '23'
+    else:
+        return
+arg = 1
+print(f(arg))
+print(type(f(arg))) # показать тип возвращаемых данных
