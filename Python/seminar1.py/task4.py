@@ -2,7 +2,7 @@
 num = float(input())
 
 def float_digit(number):
-    num_1 = number//1
+    num_1 = number//1 # можно int(number) до целого числа
     float_num = round(number-num_1,2)
     result = float_num*10
     res = round(result//1)
