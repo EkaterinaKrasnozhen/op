@@ -5,14 +5,17 @@
 # - 6 -> да
 # - 7 -> да
 # - 1 -> нет
-day_num  = int(input('Введите номер дня недели '))
+day_num = int(input('Введите номер дня недели '))
+
+
 def day_week(num):
-    week = ['пн', 'вт', 'ср', 'чт' , 'пт' , 'сб' , 'вс']
-    if (0> num > 7):
+    week = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс']
+    if (0 > num > 7):
         print('такого дня недели нет')
     elif (5 < num <= 7):
         print(f'{week[num-1]}, да')
     else:
-        print (f'{week[num-1]}, нет')
+        print(f'{week[num-1]}, нет')
+
 
 day_week(day_num)
