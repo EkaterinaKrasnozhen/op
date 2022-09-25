@@ -1,7 +1,5 @@
 # Напишите программу для. проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
-x = int(input('Введите число x '))
-y = int(input('Введите число y '))
-z = int(input('Введите число z '))
+
 
 
 def true_or(l, k, m):
@@ -12,6 +10,13 @@ def true_or(l, k, m):
         print('истинно')
     else:
         print('ложно')
+for x in range(2):
+    for x in range(2):
+        for y in range(2):
+            for z in range(2):
+                print(f' x {x} y {y} z {z}')
+                (true_or(x, y, z))
 
 
 true_or(x, y, z)
+# лишний раз выскакивает истинно в конце
