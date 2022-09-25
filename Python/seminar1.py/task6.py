@@ -7,6 +7,6 @@ def day_week(num):
     elif (5 < num <= 7):
         print(f'да, {week[num-1]}')
     else:
-        print (f' нет {week[num-1]}')
+        print (f'{week[num-1]}, нет')
 
 day_week(day_num)
