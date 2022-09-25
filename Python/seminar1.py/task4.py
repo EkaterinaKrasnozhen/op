@@ -9,3 +9,7 @@ def float_digit(number):
     print(res)
 
 float_digit(num)
+
+# n = input()
+# n_list = n.split('.') - разделяем по точке
+# print(n_list[1][0]) печатаем с индексом 1 (второе значение 0,1...) и только один символ
