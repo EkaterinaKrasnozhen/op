@@ -5,8 +5,8 @@ def day_week(num):
     if (0> num > 7):
         print('такого дня недели нет')
     elif (5 < num <= 7):
-        print(f'это выходной, {week[num-1]}')
+        print(f'да, {week[num-1]}')
     else:
-        print (week[num-1])
+        print (f' нет {week[num-1]}')
 
 day_week(day_num)

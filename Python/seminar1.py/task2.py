@@ -1,16 +1,12 @@
-# Задача 3 Вывести на экран числа от -N до N.
-number = -5
-def mines_to_plus_num(num):
-    number_one = num*-1  # num = abs(num) сделает число положительным
-    index =0
-    if (num>0):
-        while (number_one<num):
-            print (number_one+index)
-            index = 1
-            number_one = number_one+index
-    if (num<0):
-        while (num<number_one):
-            print (num+index)
-            index =1
-            num = num+index         
-mines_to_plus_num(number)
+#Задача 2: Найти максимальное из пяти чисел.
+nums = [1,3,4,51,6]
+
+def max_num(numbers):
+    max = numbers[0]
+    index = 0
+    for e in numbers:
+        if (numbers[index]>max):
+             max = numbers[index]
+        index+=1
+    return max
+print(max_num(nums))
