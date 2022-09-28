@@ -12,5 +12,5 @@ def n_elements(n):
         res = 3*i+1
         result.append(res)
     print (result[:]) # если поставить (*result[:]) то будет печать без [] и ,
-
+# print(result, sep=',') печатаем с разделителем ,
 n_elements(num)
