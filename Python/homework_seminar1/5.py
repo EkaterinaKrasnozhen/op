@@ -11,7 +11,7 @@ y2_inp = float(input('Введите координаты точки B по ос
 
 
 def find_dist(x1, y1, x2, y2):
-    s = (round(((x2 - x1) ** 2 + (y2 - y1) ** 2) ** (0.5), 3))
+    s = (round(((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5, 3))
 
     return s
 
