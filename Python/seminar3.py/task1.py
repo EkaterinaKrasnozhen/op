@@ -5,19 +5,25 @@
 import time
 
 
-def rand_time(a, b):
+def rand_time(min, max, index):
     x = time.time_ns()
-    print(x)
     ti_me = []
-    if a<10: a = 10
-    if 10<a<100: a = 100
+    temp = 0
 
-    while x > 0:
-        ti_me.append(x%10)
-        ti_me.append(x%100)
-        x = x // 10
+    for i in range(0, index):
+        if i + 1 != len(ti_me):
+            temp = x % 10 +i
+            if temp > min and temp < max:
+                ti_me.append(temp)
+                x += x // 10
+            temp = x % 100 + i
+            if temp > min and temp < max:
+                ti_me.append(temp)
+                x += x // 100
 
     return ti_me
 
 
-print(rand_time(1, 50))
+print(rand_time(1, 50, 8))  # пользователь вводит диапазон(пока только числа до 100) и количество необходимых значений
+# (длину списка)
+# почему в списке то 8 то 9 значений?
