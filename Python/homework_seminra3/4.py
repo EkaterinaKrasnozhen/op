@@ -6,28 +6,26 @@
 # - 3 -> 11
 # - 2 -> 10
 
-import string
-
 
 num = 2
 
 def ten_to_double(number):
-    double = ''
-    while number!=0:
+    double = ""
+    temp = number
+    while number != 0:
+
+        double = double + str(number % 2)
+        number //= 2
         
-         double = double + str(number%2)
-         number//=2
+    # inverted = []
+    # for i in range(0, len(double)):
+        
+    #     inverted.append(double[-1-i])
     
-    #for i in range(0,len(double)//2+1):
-        # temp = 0
-        # temp = double[i]
-        # double[i] = double[-1 -i]
-        # double[-1 -i] = temp
-    
-         
-    double[-1] == double[0]
-     
-       
-    print(double[-1])
-    
+    inverted = ''
+    for i in range(0, len(double)):
+        inverted = inverted + str(double[-1-i])   
+
+    print(f'{temp} -> {inverted}')
+
 ten_to_double(num)

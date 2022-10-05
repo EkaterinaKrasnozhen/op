@@ -71,7 +71,7 @@
 # print('r{}, g{}, b{}'.format(red,green,blue))
 
 # словари
-from subprocess import list2cmdline
+
 
 
 dictionary = {}
