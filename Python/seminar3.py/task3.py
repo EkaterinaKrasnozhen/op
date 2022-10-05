@@ -9,8 +9,12 @@
 my_list = ["qwe", "asd", "zxc", "qwe", "ertqwe"]
 def find_i_in_list(find, text):
                        count = 0
-                       for i in text[:]:
-                        if find in text:
-                         count+=1
+                       num = 0
+                       if find in text:
+                             count+=1
+                             print(count)
+                        
+                             
+find_i_in_list('qwe', my_list)
         
         

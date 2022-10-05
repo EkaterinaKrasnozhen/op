@@ -12,10 +12,4 @@ def coincid(a, b):
 print(coincid(a_str, b_str))
 
 
-def coincid2(a_st, b_st):
-    index = 0
-    if b_st in a_st:
-        index += 1
-    return index
 
-print(coincid2(a_str,b_str))
