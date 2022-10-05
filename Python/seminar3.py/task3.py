@@ -6,15 +6,19 @@
 # - список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
 # - список: [], ищем: "123", ответ: -1
 
-my_list = ["qwe", "asd", "zxc", "qwe", "ertqwe"]
+my_list = ["йцу", "фыв", "ячс", "цук", "йцукен", "йцу"]
+
+
 def find_i_in_list(find, text):
-                       count = 0
-                       num = 0
-                       if find in text:
-                             count+=1
-                             print(count)
-                        
-                             
-find_i_in_list('qwe', my_list)
-        
-        
+    count = []
+    for e in range(0, len(text)):
+        if find == text[e]:
+            count.append(e)
+
+    if (len(count)) > 1:
+        print(f'ответ {count[1]}')
+    else:
+        print("нет второго вхождения")
+
+
+find_i_in_list("йцу", my_list)
