@@ -11,8 +11,8 @@ def rand_time(min, max, index):
     temp = 0
 
     for i in range(0, index):
-        if i + 1 != len(ti_me):
-            temp = x % 10 +i
+        
+            temp = x % 10 + i*i
             if temp > min and temp < max:
                 ti_me.append(temp)
                 x += x // 10
@@ -20,10 +20,11 @@ def rand_time(min, max, index):
             if temp > min and temp < max:
                 ti_me.append(temp)
                 x += x // 100
-
     return ti_me
 
 
-print(rand_time(1, 50, 8))  # пользователь вводит диапазон(пока только числа до 100) и количество необходимых значений
+print(rand_time(1, 50, 8))
+
+# пользователь вводит диапазон(пока только числа до 100) и количество необходимых значений
 # (длину списка)
-# почему в списке то 8 то 9 значений?
+# как задать длину списка значением index?
