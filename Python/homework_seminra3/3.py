@@ -5,6 +5,8 @@
 
 # - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
+# if isinstance(n, float): проверит true или false
+
 my_list = [1.1, 1.2, 3.1, 5, 10.01]
 
 def float_minus(list1):
