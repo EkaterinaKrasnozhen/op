@@ -12,7 +12,7 @@ def mult_elem_list(list1):
     mult = []
     index = 0
     for i in range(0,len(list1)//2):
-        mult.append(list1[i]*list1[-1-i]) #math.seil(index/2) округлит в большую сторону math.for в меньшую
+        mult.append(list1[i]*list1[-1-i]) # import math math.seil(index/2) округлит в большую сторону math.for в меньшую
     if len(list1)%2!=0:
                 mult.append(list1[len(list1)//2]*list1[len(list1)//2])
         
