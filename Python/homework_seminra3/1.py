@@ -13,7 +13,7 @@ def sum_odd_elem(list1):
     elem = []
     sum = 0
     for i in range(0, len(list1)):
-        if i % 2 != 0:
+        if i % 2 != 0: # if i%2 - будет 1 это true нечетные, if (not i%2) четные
             elem_ind.append(i)
             elem.append(list1[i])
     for i in elem_ind:
