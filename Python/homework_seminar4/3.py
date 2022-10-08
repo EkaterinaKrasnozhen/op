@@ -29,3 +29,4 @@ def unic_elem(a):
 
 
 unic_elem(my_list)
+# почему не сравниваются дальше индексы?
