@@ -4,7 +4,6 @@
 
 my_list = [3, 8, 3, 54, 5, 54]
 
-
 def unic_elem(a):
     b = set(a.copy())
     print(b)
