@@ -30,7 +30,7 @@ data.write(res)
 data.close()
 
 
-#не получается открыть файлы
+#не получается открыть файлы o.TextIOWrapper name='poli_task5.txt' mode='r' encoding='cp1251'>
 exit()
 with open("poli_task5.txt", "w") as data:
     data.write("81x^2 + 36x + 12 = 0")
