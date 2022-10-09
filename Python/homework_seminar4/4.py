@@ -22,6 +22,6 @@ def polynom(k):
 
 result = polynom(degree_num)
 print(result)
-data = open('polynom.txt', 'w')
+data = open('polynom2.txt', 'a')
 data.write(result)
 data.close()
