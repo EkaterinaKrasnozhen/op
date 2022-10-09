@@ -9,17 +9,17 @@
 # data.write('Line 3\n')
 # data.close()
 
-# exit() #не выполняет код, который под exit написан
-# with open('file.txt', 'w') as data:
-#     data.write('Line1\n')
-#     data.write('Line2\n')
-#     # автоматически закрывает после работы, можно без data.close()
+#exit() #не выполняет код, который под exit написан
+with open('file.txt', 'w') as data:
+    data.write('Line1\n')
+    data.write('Line2\n')
+    # автоматически закрывает после работы, можно без data.close()
 
-# path = 'file.txt'
-# data = open(path, 'r')
-# for line in data:
-#     print(line)
-# data.close()
+path = 'file.txt'
+data = open(path, 'r')
+for line in data:
+    print(line)
+data.close()
 
 # импорт функций
 
@@ -75,14 +75,14 @@
 
 
 
-dictionary = {}
-dictionary = \
-    {
-        'up':'↑',
-        'left':'←',
-        'down':'↓',
-        'right':'→'   
-    }
+# dictionary = {}
+# dictionary = \
+#     {
+#         'up':'↑',
+#         'left':'←',
+#         'down':'↓',
+#         'right':'→'   
+#     }
 # print(dictionary)
 # print(dictionary['left'])
 
@@ -112,8 +112,8 @@ dictionary = \
 # print(colors)
 # colors.clear() #очистить все
 
-a = {'grey','e','red'}
-b = {'12','done','e', '123'}
+# a = {'grey','e','red'}
+# b = {'12','done','e', '123'}
 # c = a.copy()
 # print(c)
 # u = a.union(b)
@@ -132,7 +132,7 @@ b = {'12','done','e', '123'}
 
 # списки
 
-list1 = [1,2,3,4]
+# list1 = [1,2,3,4]
 # list2 = list1
 # print(list1)
 # print()
@@ -142,11 +142,11 @@ list1 = [1,2,3,4]
 # print()
 # print(list2)  # значения меняются в обоих списках, даже если изменить в list2
 
-print(list1)
-print(list1.pop()) #удалеяет последний элемент
-print(list1)
-print(list1.pop(0)) # удалить конкретный элемент
-print(list1.insert(1,11))
-print(list1)
-print(list1.append(11)) #добавление в конец
-print(list1)
+# print(list1)
+# print(list1.pop()) #удалеяет последний элемент
+# print(list1)
+# print(list1.pop(0)) # удалить конкретный элемент
+# print(list1.insert(1,11))
+# print(list1)
+# print(list1.append(11)) #добавление в конец
+# print(list1)
