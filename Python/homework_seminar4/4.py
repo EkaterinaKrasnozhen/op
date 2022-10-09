@@ -18,6 +18,10 @@ def polynom(k):
     x.append(f"{random.randint(0,100)} = 0")
     a = "".join(str(n) for n in x)
 
-    print(a)
+    return(a)
 
-polynom(degree_num)
+result = polynom(degree_num)
+print(result)
+data = open('polynom.txt', 'w')
+data.write(result)
+data.close()
