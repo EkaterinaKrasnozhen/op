@@ -30,8 +30,8 @@
 #     return x*y
 
 
-def calc(op, a, b):
-    print(op(a, b))
+# def calc(op, a, b):
+#     print(op(a, b))
     # return op(a,b)
 
 
@@ -45,7 +45,7 @@ def calc(op, a, b):
 # sum = lambda x,y: x+y
 # calc(sum, 2,2)
 
-calc(lambda x, y: x + y, 4, 5)
+# calc(lambda x, y: x + y, 4, 5)
 
 # List Comprehension
 
@@ -69,8 +69,28 @@ calc(lambda x, y: x + y, 4, 5)
 # list4 = [(i, f(i)) for i in range(1, 10) if i%2 == 0] #тоже самое для наглядности в кортеже
 # print(list4)
 
-def f_2(y):
-    return y*y
-list5 = [(i, f_2(i)) for i in [1,2,3,5,8,15,23,38] if i%2 == 0] # задача с семинара: 
-#четные числа из списка возвести в квадрат и записать в кортежи
-print(list5) # todo
+# def f_2(y):
+#     return y*y
+# list5 = [(i, f_2(i)) for i in [1,2,3,5,8,15,23,38] if i%2 == 0] # задача с семинара:
+# #четные числа из списка возвести в квадрат и записать в кортежи
+# print(list5)
+
+
+#анонимные лямбда функции
+
+f = open('f.txt', 'r')
+data = f.read() + ' '
+f.close()
+
+numbers = []
+
+while data != '':
+    space_pos = data.index(' ')
+    numbers.append(int(data[:space_pos]))
+    data = data[space_pos+1:]
+    
+out = []
+for e in numbers:
+    if not e%2:
+        out.append((e,e**2))
+print(out)
