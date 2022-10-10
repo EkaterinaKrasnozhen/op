@@ -1,6 +1,15 @@
 # 5. Даны два файла, в каждом из которых находится запись многочлена.
 # Задача - сформировать файл, содержащий сумму многочленов.
+# with open("poli_task5.txt", "w") as data:
+#     data.write("81x^2 + 36x + 12 = 0")
 
+# with open("poli2_task5.txt", "a") as data:
+#     data.write("2x^2 + 6x + 1 = 0")
+
+# data = open("poli_task5.txt", "r")
+# k = data.read()
+# print(k)
+# data.close()
 
 poli1 = "81x^2 + 36x + 12 = 0".replace("x", " ").split()
 poli2 = "2x^2 + 6x + 1 = 0".replace("x", " ").split()
@@ -30,13 +39,6 @@ data.write(res)
 data.close()
 
 
-#не получается открыть файлы o.TextIOWrapper name='poli_task5.txt' mode='r' encoding='cp1251'>
-exit()
-with open("poli_task5.txt", "w") as data:
-    data.write("81x^2 + 36x + 12 = 0")
 
-with open("poli2_task5.txt", "a") as data:
-    data.write("2x^2 + 6x + 1 = 0")
 
-data = open("poli_task5.txt", "r")
-print(data)
+
