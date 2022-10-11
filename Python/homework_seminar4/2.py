@@ -19,3 +19,14 @@ def nat_divider(n):
 
 
 print(*nat_divider(num))
+
+
+# n = 80
+# sieve = set(range(2,n+1))
+# prime_list = []
+# while sieve:
+#     prime = min(sieve)
+#     prime_list.append(prime)
+#     sieve -= set(range(prime,n+1,prime))
+
+# print(sieve)
