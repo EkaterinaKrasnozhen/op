@@ -12,7 +12,7 @@
 
 # cross_field(list1)
 
-move = input('Введите координаты вашего хода: ').replace(' ','')
+move = input('Введите координаты вашего хода: ').replace(' ','').replace(',','').replace('.','')
 print(move[1])
                                                   
 
