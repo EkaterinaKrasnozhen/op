@@ -4,6 +4,7 @@ text = 'абв абвгдейка ура что сабв сам'.split()
 x = 'абв'
  
 lis = [i for i in text if x not in i]
-print(lis)
+
+print(*lis)
 
     
