@@ -9,38 +9,37 @@
 # a) Добавьте игру против бота
 # b) Подумайте как наделить бота "интеллектом"
 
-print("Всего 2021 конфета, за один ход можно взять от 1 до 28, выиграет тот, кто заберет последние конфеты")
-candy = 100
-choice = int(input("Сколько конфет вы забираете? "))
+print("Всего 2021 конфета, за один ход можно взять от 1 до 28, выиграет тот, кто заберет последние конфеты. Два игрока")
+candy = 58
+choice = int(input(" Ход игрока 1. Сколько конфет вы забираете? "))
 
+def candy_mines(number, user_choice):  # number = количество конфет, user_choice - цифра ск выбрал пользователь
+    count = 0
+    user = 0
 
-def inp(n):
-    max_value = 28
-    num = range(1, max_value + 1)
-    if n not in num:
-        return False
-    else:
-        return True
-
-
-inp(choice)
-
-# while candy>0:
-# if inp(choice):
-# remains = lambda x,y: x-y
-
-
-def candy_mines(number, user_choice):  # number = количество конфет, user_chice - цифра ск выбрал пользователь
     while number > 0:
-        if inp(user_choice):  # если введено верное число вычитаем
+        if user_choice in range(1, 29):
             number -= user_choice
+            if number == 0:
+                print(f"Огра окончена, победил игрок {user}")
+                break
             print(number)
-            user_choice = int(input("ск еще? "))    # if candy > 0:
+            count += 1
+            
+            if not count % 2:
+                user_choice = int(input("Игрок 1, ск еще? "))
+                user = 1
+            else:
+                user_choice = int(input("Игрок 2, ск еще? "))
+                user = 2
+            
+            if number < user_choice:
+                print("остаток меньше введенного числа")
+                user_choice = int(input("ск еще? "))
+
         else:
-            print('неверное число') 
-    return number
-
-#res = candy_mines(candy, choice)
+            print("неверное число")
+            user_choice = int(input("ск еще? "))
 
 
-print(candy_mines(candy, choice))
+candy_mines(candy, choice)
