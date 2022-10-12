@@ -1,19 +1,10 @@
 # 5. Создайте программу для игры в "Крестики-нолики".
 
 
-list1 = [
-    ["  1", "   2  ", " 3  "],
+list1 = [["  1", "   2  ", " 3  "],
     ["a", "|__|", "|__|", "|__|"],
     ["b", "|__|", "|__|", "|__|"],
-    ["c", "|__|", "|__|", "|__|"],
-]
-# def cross_field(lis):
-#  for i in range(0,len(lis)):
-#   for e in lis[i]:
-#         print(f'{e}',end='')
-#   print()
-
-# cross_field(list1)
+    ["c", "|__|", "|__|", "|__|"],]
 
 move_x = (input("Введите координаты вашего хода x: ").replace(" ", "").replace(",", "").replace(".", ""))
 #move_y = (input("Введите координаты вашего хода: ").replace(" ", "").replace(",", "").replace(".", ""))
@@ -22,8 +13,6 @@ list1 = [["  1", "   2  ", " 3  \n"],
     ["a", "|__|", "|__|", "|__|\n"],
     ["b", "|__|", "|__|", "|__|\n"],
     ["c", "|__|", "|__|", "|__|\n"]]
-
-
 
 dictionary = \
 {
@@ -40,8 +29,6 @@ dictionary = \
 
 a = dictionary[move_x]
 
-
-
 def cross_field(lis, x):
     dictionary = \
 {
@@ -56,8 +43,8 @@ def cross_field(lis, x):
     "3c": "33",
 }
     count = 1
-    while count< 7:
-     x = dictionary[input(' Введите коорданты хода: ')]
+    while count< 7: # когда остановить и как продолжить? получается два хода сделать
+     
      for i in range(0, len(lis)):
         for e in lis[i]:
             print(f"{e}", end= "")
@@ -70,9 +57,5 @@ def cross_field(lis, x):
             print(f"{e}", end= "")
             lis[int(x[0])][int(x[1])] = "| y|"
             count+=1  
-         
         
-    
-
-
 cross_field(list1, a)
