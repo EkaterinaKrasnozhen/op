@@ -15,15 +15,15 @@ list1 = [
 
 # cross_field(list1)
 
-move_x = (input("Введите координаты вашего хода: ").replace(" ", "").replace(",", "").replace(".", ""))
-move_y = (input("Введите координаты вашего хода: ").replace(" ", "").replace(",", "").replace(".", ""))
+move_x = (input("Введите координаты вашего хода x: ").replace(" ", "").replace(",", "").replace(".", ""))
+#move_y = (input("Введите координаты вашего хода: ").replace(" ", "").replace(",", "").replace(".", ""))
 
-list1 = [["  1", "   2  ", " 3  "],
-    ["a", "|__|", "|__|", "|__|"],
-    ["b", "|__|", "|__|", "|__|"],
-    ["c", "|__|", "|__|", "|__|"]]
+list1 = [["  1", "   2  ", " 3  \n"],
+    ["a", "|__|", "|__|", "|__|\n"],
+    ["b", "|__|", "|__|", "|__|\n"],
+    ["c", "|__|", "|__|", "|__|\n"]]
 
-# list1[1][1] = '| x|'
+
 
 dictionary = \
 {
@@ -39,10 +39,10 @@ dictionary = \
 }
 
 a = dictionary[move_x]
-b = dictionary[move_y]
 
 
-def cross_field(lis, x, y):
+
+def cross_field(lis, x):
     dictionary = \
 {
     "1a": "11",
@@ -55,24 +55,24 @@ def cross_field(lis, x, y):
     "2c": "32",
     "3c": "33",
 }
-    count = 0
-    for i in range(0, len(lis)):
+    count = 1
+    while count< 7:
+     x = dictionary[input(' Введите коорданты хода: ')]
+     for i in range(0, len(lis)):
         for e in lis[i]:
+            print(f"{e}", end= "")
+            lis[int(x[0])][int(x[1])] = "| x|"
+            count+=1
             
-              print(f"{e}", end="")
-              lis[int(x[0])][int(x[1])] = "| x|"
-              count += 1
-            
-            # else:
-            #     print(f"{e}", end="")
-            #     lis[int(y[0])][int(y[1])] = "| 0|"
-            #     count += 1
-                
-        print()
+     x = dictionary[input(' Введите коорданты хода: ')]
+     for i in range(0, len(lis)):
+        for e in lis[i]:
+            print(f"{e}", end= "")
+            lis[int(x[0])][int(x[1])] = "| y|"
+            count+=1  
+         
         
-    move = (input("Введите координаты вашего хода: ").replace(" ", "").replace(",", "").replace(".", ""))  
-    x = dictionary[move]
-    print(x)
+    
 
 
-cross_field(list1, a, b)
+cross_field(list1, a)
