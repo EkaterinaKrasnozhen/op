@@ -1,35 +1,23 @@
-# 5. Создайте программу для игры в "Крестики-нолики".
+# list1 = [["  1", "   2  ", " 3  "],
+#          ["a", "|__|", "|__|", "|__|"],
+#          ["b", "|__|", "|__|", "|__|"],
+#          ["c", "|__|", "|__|", "|__|"]]
 
 
-list1 = [["  1", "   2  ", " 3  "],
-    ["a", "|__|", "|__|", "|__|"],
-    ["b", "|__|", "|__|", "|__|"],
-    ["c", "|__|", "|__|", "|__|"],]
+# move_x = (input("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РІР°С€РµРіРѕ С…РѕРґР° x: ").replace(" ", "").replace(",", "").replace(".", ""))
+# #move_y = (input("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РІР°С€РµРіРѕ С…РѕРґР°: ").replace(" ", "").replace(",", "").replace(".", ""))
+#
+list1 = [["  1", "   2  ", " 3", "\n"],
+         ["a", "|__|", "|__|", "|__|", "\n"],
+         ["b", "|__|", "|__|", "|__|", "\n"],
+         ["c", "|__|", "|__|", "|__|", "\n"]]
 
-move_x = (input("Введите координаты вашего хода x: ").replace(" ", "").replace(",", "").replace(".", ""))
-#move_y = (input("Введите координаты вашего хода: ").replace(" ", "").replace(",", "").replace(".", ""))
+print('введите координаты хода:')
+for i in range(0, len(list1)):
+    for e in list1[i]:
+        print(f"{e}", end="")
 
-list1 = [["  1", "   2  ", " 3  \n"],
-    ["a", "|__|", "|__|", "|__|\n"],
-    ["b", "|__|", "|__|", "|__|\n"],
-    ["c", "|__|", "|__|", "|__|\n"]]
-
-dictionary = \
-{
-    "1a": "11",
-    "2a": "12",
-    "3a": "13",
-    "1b": "21",
-    "2b": "22",
-    "3b": "23",
-    "1c": "31",
-    "2c": "32",
-    "3c": "33",
-}
-
-a = dictionary[move_x]
-
-def cross_field(lis, x):
+def cross_field(lis):
     dictionary = \
 {
     "1a": "11",
@@ -43,19 +31,45 @@ def cross_field(lis, x):
     "3c": "33",
 }
     count = 1
-    while count< 7: # когда остановить и как продолжить? получается два хода сделать
-     
-     for i in range(0, len(lis)):
-        for e in lis[i]:
-            print(f"{e}", end= "")
-            lis[int(x[0])][int(x[1])] = "| x|"
-            count+=1
-            
-     x = dictionary[input(' Введите коорданты хода: ')]
-     for i in range(0, len(lis)):
-        for e in lis[i]:
-            print(f"{e}", end= "")
-            lis[int(x[0])][int(x[1])] = "| y|"
-            count+=1  
+    x_steps = set()
+    y_steps = set()
+    while count < 10: 
+        if count % 2:
+            x = dictionary[input(' ходят X: ')]
+            for i in range(0, len(lis)):
+                for e in lis[i]:
+                    print(f"{e}", end= "")
+                    lis[int(x[0])][int(x[1])] = "| x|"
+                    x_steps.add(x)          
+
+        else:
+            x = dictionary[input(' ходят 0: ')]
+            for i in range(0, len(lis)):
+                for e in lis[i]:
+                    print(f"{e}", end= "")
+                    lis[int(x[0])][int(x[1])] = "| 0|"
+                    y_steps.add(x)
+                    
+        count += 1
         
-cross_field(list1, a)
+        print(f'{x_steps = }')
+        print(f'{y_steps = }')
+        win = ({'11', '12', '13'},
+               {'21', '22', '23'},
+               {'31', '32', '33'},
+               {'11', '21', '31'},
+               {'12', '22', '32'},
+               {'13', '23', '33'},
+               {'11', '22', '33'},
+               {'13', '22', '31'})
+        for i in win:
+            if x_steps >= i:
+                return 'выиграли Х'
+                
+            elif y_steps >= i:
+                return 'выиграли 0'
+                
+            
+
+
+print(cross_field(list1))
