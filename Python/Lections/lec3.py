@@ -61,6 +61,12 @@
 # list3 = [(i,i) for i in range(1, 10) if i%2 == 0] #создать пару и список кортежей
 # print(list3)
 
+#dict comprehension
+from random import randint
+
+dict_cmp = {i: randint(0,10) for i in range(10)}
+print(dict_cmp)
+
 # def f(x):
 #     return x**3
 # list4 = [f(i) for i in range(1, 10) if i%2 == 0] #функция f после всех действий возводит в 3 степень
