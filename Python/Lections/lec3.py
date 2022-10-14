@@ -174,3 +174,6 @@ ids = [4,5,9,14,7]
 salary = [111,22,33]
 data = list(enumerate(ids)) # пронумеровать
 print(data) # получим кортежи
+
+for i,a in enumerate(users):
+    print(f'{i = } {a = }') #обращение к индексу и значению по этому индексу
