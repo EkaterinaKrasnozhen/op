@@ -103,6 +103,8 @@ data.close()
 # for item in dictionary:      # for (k,v) in dictionary.items()
 #     print('{} : {}'.format(item, dictionary[item])) #pprint(...) выведет словарь с новой строки
 
+#print('вверх:', dictionary.get('up')) #печатаем значения из словаря
+#print('вверх: ', dictionary['up'])
 #множества
 
 # colors = {'red', 'green','blue'} #set тип множества
