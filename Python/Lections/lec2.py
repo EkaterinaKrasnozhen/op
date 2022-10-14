@@ -101,7 +101,7 @@ data.close()
 # # del dictionary['left'] # удаление элемента
 
 # for item in dictionary:      # for (k,v) in dictionary.items()
-#     print('{} : {}'.format(item, dictionary[item]))
+#     print('{} : {}'.format(item, dictionary[item])) #pprint(...) выведет словарь с новой строки
 
 #множества
 
