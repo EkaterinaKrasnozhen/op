@@ -177,3 +177,6 @@ print(data) # получим кортежи
 
 for i,a in enumerate(users):
     print(f'{i = } {a = }') #обращение к индексу и значению по этому индексу
+
+for w in enumerate(users):
+    print(w)  # выводим кортеж из индекса и значения
