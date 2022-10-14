@@ -10,16 +10,16 @@
 # data.close()
 
 #exit() #не выполняет код, который под exit написан
-with open('file.txt', 'w') as data:
-    data.write('Line1\n')
-    data.write('Line2\n')
-    # автоматически закрывает после работы, можно без data.close()
+# with open('file.txt', 'w') as data:
+#     data.write('Line1\n')
+#     data.write('Line2\n')
+#     # автоматически закрывает после работы, можно без data.close()
 
-path = 'file.txt'
-data = open(path, 'r')
-for line in data:
-    print(line)
-data.close()
+# path = 'file.txt'
+# data = open(path, 'r')
+# for line in data:
+#     print(line)
+# data.close()
 
 # импорт функций
 
@@ -105,6 +105,25 @@ data.close()
 
 #print('вверх:', dictionary.get('up')) #печатаем значения из словаря
 #print('вверх: ', dictionary['up'])
+
+my_dict = \
+    {
+        'age':22,
+        'city':'Moscow',
+        'height':128,
+          
+    }
+    
+my_dict2 = \
+    {
+        'пол':'M',
+        'eyes':'blue',
+        'number':9262264242,
+          
+    }
+
+my_dict.update(my_dict2)
+print(my_dict) # добавит в первый словарь пункты из второго
 #множества
 
 # colors = {'red', 'green','blue'} #set тип множества
