@@ -1,1 +1,9 @@
-19:35; temperature; <function get_temperatur at 0x0000012ECB63B250>19:35; pressure; <function get_pressure at 0x0000012ECB6813F0>19:35;wind speed; <function get_wind_speed at 0x0000012ECB681900>19:46; temperature; <function get_temperatur at 0x0000020C8759B250>19:46; pressure; <function get_pressure at 0x0000020C875E53F0>19:46;wind speed; <function get_wind_speed at 0x0000020C875E5900>19:59; temperature; <function get_temperatur at 0x000001DB2F27B370>19:59; pressure; <function get_pressure at 0x000001DB2F2C5480>19:59;wind speed; <function get_wind_speed at 0x000001DB2F2C5990>20:03; temperature; <function get_temperatur at 0x0000023B0A04B370>20:03; pressure; <function get_pressure at 0x0000023B0A5D9EA0>20:03;wind speed; <function get_wind_speed at 0x0000023B0A5D9F30>20:04; temperature; <function get_temperatur at 0x000002E3B34EB130>20:04; pressure; <function get_pressure at 0x000002E3B3AC5CF0>20:04;wind speed; <function get_wind_speed at 0x000002E3B3AC5D80>20:06; temperature; -1820:06; pressure; 74520:06;wind speed; 30
+20:11; temperature; -10
+20:11; pressure; 746
+20:11;wind speed; 49
+20:11; temperature; -18
+20:11; pressure; 728
+20:11;wind speed; 38
+20:11; temperature; -20
+20:11; pressure; 750
+20:11;wind speed; 47
