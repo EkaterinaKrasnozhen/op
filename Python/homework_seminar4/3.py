@@ -13,7 +13,7 @@ def unic_elem(a):
 unic_elem(my_list)
 
 
-def unic_elem_2(b):
+def unic_elem_2(i):
     uniq_list = []
     for i in my_list:
         if my_list.count(i) == 1:
