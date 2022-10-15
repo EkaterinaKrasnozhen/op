@@ -11,5 +11,7 @@
 
 my_lis = '2+2'
 my_lis2 = '(1+2)*3'
+my_lis3 = '(1-2*3)/2'
 print(f'{my_lis} => {eval(my_lis)}')
 print(f'{my_lis2} => {eval(my_lis2)}')
+print(f'{my_lis3} => {eval(my_lis3)}')
