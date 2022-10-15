@@ -91,7 +91,9 @@
 
 # for k in dictionary.values(): # печатаем значения
 #     print(k)
-    
+
+# for k,v in dictionary.items():
+      #print(k,v)    
 # for v in dictionary:     # тоже значения
 #     print(dictionary[v])
     
