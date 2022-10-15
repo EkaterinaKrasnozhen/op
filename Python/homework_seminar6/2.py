@@ -18,17 +18,19 @@ def sum_odd_elem(list1):
         sum += my_list[i]
     print(f'элементы на нечетных позициях {elem}, ответ {sum}')
 
-
 sum_odd_elem(my_list)
+
 
 # новый вариант List Comprehension
 
 list_1 = [i for i in range(0, len(my_list))  if i % 2 != 0]
-print(f'элементы на нечтеных позициях: ')
+print(f'\n NEW элементы на нечтеных позициях: ')
 res = 0
 for e in range(0,len(list_1)):
     print(my_list[list_1[e]])
     res += my_list[list_1[e]]
   
 print(f' сумма : {res}')
+
+
 
