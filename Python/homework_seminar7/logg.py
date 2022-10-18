@@ -1,7 +1,13 @@
 
+import mod
 
-# получаем актуальный список абонентов в словаре
+#записываем новые данные в файл
+def data_per(data):
+    with open('persons.cvs', 'a', encoding= 'utf-8') as file:
+        file.write(f'{data}\n')
 
+
+#получаем актуальные данные из файла в виде словаря
 dict = dict()
 def get_dictionary_from_file():
   data = open('persons.cvs', 'r', encoding='utf-8')
@@ -16,16 +22,11 @@ def get_dictionary_from_file():
   return dict
 
 
-# вносим новые данные
 
-def data_per(data):
-    with open('persons.cvs', 'a') as file:
-        file.write(f'{data}\n')
-
-
-#найти по первой букве абонента в словаре
-       
+# поиск в полученных данных по первой букве
 def find_in_data(choice, list1):
    for k,v in list1.items():
        if choice == k[0]:
-        print(k,v) 
+        print(k,v)
+
+
