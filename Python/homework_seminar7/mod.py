@@ -8,6 +8,8 @@ def get_1st_userchar():
     return char1
 
 
+
+
 # exit()
 
 # def change_name():
