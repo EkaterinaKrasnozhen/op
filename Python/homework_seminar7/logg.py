@@ -44,3 +44,4 @@ def new_create(data):
         page.write(html)
 
     return data
+  
