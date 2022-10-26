@@ -4,8 +4,8 @@ import user_interface as us
 bd = sqlite3.connect("hw_base.db")
 cursor = bd.cursor()
 
+# найти по id
 def find_id():
-    
     id_num = us.search_id()
     cursor.execute(f'SELECT * FROM personal WHERE id={id_num};')
     one= cursor.fetchone()
