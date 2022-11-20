@@ -1,4 +1,3 @@
-
 public class lib {
 
         static void sayHi() {
