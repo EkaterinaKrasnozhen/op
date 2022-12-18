@@ -25,23 +25,29 @@ public class Main {
         tree.add(human8);
         System.out.println(tree);
         System.out.println("--------");
+        
         System.out.printf(" Объект - %s \n Мать Объекта -  %s Отец Объекта - %s", human7.getName(), human7.getMother(), human7.getFather());
         System.out.println("--------");
+        
         System.out.printf("Дети Объекта: %s\n", human5.getChildren());
         System.out.println("--------");
+        
         List<Human> findSisBro = human7.getSisBro();
         System.out.printf("Братья/сестры Объекта \n %s", findSisBro);
         System.out.println("--------");
+        
         List<Human> grands = human8.getGrands();
         System.out.printf("Бабушки/дедушки Объекта: \n%s", grands);
         System.out.println();
+        
         human1.setName("Alex");
         System.out.println(human1.getName());
+        
         Scanner iScanner = new Scanner(System.in);
         System.out.println("Start search by Name: ");
         String get_user = iScanner.nextLine();
-        List<Human> res = tree.getHumanByName(get_user); // не добавляет в список
-        System.out.println(res);
         iScanner.close();
+        List<Human> res = tree.getHumanbyName(get_user);
+        System.out.println(res);
     }
 }

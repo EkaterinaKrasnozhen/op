@@ -23,14 +23,14 @@ public class FamilyTree {
     }
 
     /**Поиск по имени */
-    public List<Human> getHumanByName(String findByName) {
-        List<Human> res = new ArrayList<>();
+    public List<Human> getHumanbyName(String findByName) {
+        List<Human> list = new ArrayList<>();
         for (Human human : humans ) {
-            if (human.getName() == findByName) {
-                res.add(human);
+            if (findByName.equals(human.getName())) {
+                list.add(human);
             }
         }
-        return res;
+        return list;
     }
 
     /**Переопределение метода toString */
