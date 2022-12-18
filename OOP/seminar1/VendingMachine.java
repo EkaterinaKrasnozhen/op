@@ -6,7 +6,7 @@ import java.util.List;
 public class VendingMachine { // все классы наследуются от класса extends(расширяет) Object
     List<Product> products;// просто ссылка на лист продуктов, пока нет = ArrayList..
 
-    public VendingMachine( List <Product> products) { //конструкторы должны отличаться набором аргументов или вообще ничего
+    public VendingMachine(List <Product> products) { //конструкторы должны отличаться набором аргументов или вообще ничего
         //super();
         this.products = products; 
     }
