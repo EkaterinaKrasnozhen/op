@@ -3,11 +3,12 @@ package lec2;
 import java.util.Random;
 
 
-public abstract class BaseHero {
+public abstract class BaseHero { //асбтракция - определяются общие поля и методы, экземпляр и метод абстрактого класса вызвать нельзя, можно не описывать логику
     protected static int number;
     protected static Random r;
 
     protected String name;
+    protected String surname;
     protected int hp;
     protected int maxHp;
 
@@ -16,6 +17,8 @@ public abstract class BaseHero {
         BaseHero.number = 0;
         BaseHero.r = new Random();
     } 
+
+
 
     public BaseHero(String name, int hp) {
         this.name = name;

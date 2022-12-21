@@ -42,12 +42,27 @@ public class ProgMagicPriest {
                     teams.add(new Magician());
                     break;
                 default:
-                    //teams.add(new BaseHero()); //создать героя типа герой - неправильно, можно сделать класс BaseHero adstract и тогда не даст создать
+                    teams.add(new Magician()); //создать героя типа герой - неправильно, можно сделать класс BaseHero adstract и тогда не даст создать
                     break;
             }
             System.out.println(teams.get(index).getInfo());
                 
 
         }
+
+        //Иерархия вызова констуркторов
+
+        System.out.println("Human h1 = new Human();");
+        Human h1 = new Human();
+        System.out.println(h1);
+
+        System.out.println("Magician m1 = new Human();");
+        Magician m1 = new Human();
+        System.out.println(m1);
+
+        System.out.println("BaseHero h1 = new Human();");
+        BaseHero b1 = new Human();
+        System.out.println(b1);
+
     }
 }
