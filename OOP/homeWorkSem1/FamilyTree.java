@@ -1,9 +1,9 @@
 package homeWorkSem1;
-
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FamilyTree {
+public class FamilyTree implements Serializable{
     
     List<Human> humans;
     private Human father;
@@ -46,6 +46,11 @@ public class FamilyTree {
     /**Переопределение метода toString */
     @Override
     public String toString() {
-        return "Family Tree: \n" + humans + " ";
+        return "\n" + humans + " ";
+    }
+
+    Writeble fileSaver;
+    public void save(Serializable serializable) {
+        fileSaver.save(serializable);
     }
 }

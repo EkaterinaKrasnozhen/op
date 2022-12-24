@@ -12,6 +12,10 @@ public class Human {
     public Human father;
     private Human mother;
     public List<Human> children = new ArrayList<>();
+
+    enum Gender {
+        Male, Female
+    }
     
     /**Создание нового объекта */
     public Human(String name, int age, boolean gender, Human father, Human mother) {
@@ -19,7 +23,8 @@ public class Human {
         this.age = age;
         this.gender = gender;
         this.father = father;
-        this.mother = mother;  
+        this.mother = mother;
+          
     }
 
     /**Получение инф-ии о братьях/сестрах */
