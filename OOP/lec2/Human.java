@@ -2,6 +2,7 @@ package lec2;
 
 public class Human extends Magician {
     int mp;
+    public Object children;
 
     public Human (String name, int hp, int mp) {
         super();

@@ -9,9 +9,9 @@ public class Human {
     private String name;
     private int age;
     private boolean gender;
-    private Human father;
+    public Human father;
     private Human mother;
-    private List<Human> children = new ArrayList<>();
+    public List<Human> children = new ArrayList<>();
     
     /**Создание нового объекта */
     public Human(String name, int age, boolean gender, Human father, Human mother) {
@@ -19,13 +19,7 @@ public class Human {
         this.age = age;
         this.gender = gender;
         this.father = father;
-        this.mother = mother;
-        if (father != null) {
-            father.children.add(this);   
-        }
-        if (mother != null)  {
-            mother.children.add(this);
-        }    
+        this.mother = mother;  
     }
 
     /**Получение инф-ии о братьях/сестрах */

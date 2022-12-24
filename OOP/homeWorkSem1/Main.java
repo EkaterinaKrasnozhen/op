@@ -40,10 +40,7 @@ public class Main {
         List<Human> grands = human8.getGrands();
         System.out.printf("Бабушки/дедушки Объекта: \n%s", grands);
         System.out.println();
-        
-        human1.setName("Alex");
-        System.out.println(human1.getName());
-        
+          
         Scanner iScanner = new Scanner(System.in);
         System.out.println("Start search by Name: ");
         String get_user = iScanner.nextLine();

@@ -6,6 +6,10 @@ import java.util.List;
 public class FamilyTree {
     
     List<Human> humans;
+    private Human father;
+    private Human mother;
+    List<Human> children = new ArrayList<>();
+
     
     /**Инициализация humans */
     public FamilyTree(List<Human> humans) {
@@ -20,6 +24,12 @@ public class FamilyTree {
     /**Добавление нового Human */
     public void add(Human human) {
         humans.add(human);
+        if (father != null) {
+            father.children.add(human);  
+        }
+        if (mother != null)  {
+            mother.children.add(human);
+        } 
     }
 
     /**Поиск по имени */
