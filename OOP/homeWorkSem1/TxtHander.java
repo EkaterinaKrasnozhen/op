@@ -1,20 +1,11 @@
 package homeWorkSem1;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
 import java.io.Serializable;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import homeWorkSem1.Human;
+
 
 public class TxtHander implements Writeble {
 
@@ -28,18 +19,19 @@ public class TxtHander implements Writeble {
         
     }
 
-    // public String read() throws IOException {
-    //     String treeArray = "";
-    //     BufferedReader reader = new BufferedReader(new FileReader("FamilyTree.txt"));
-    //     String line = reader.readLine();
-    //     while (line != null) {
-    //         treeArray += line;
-    //         line = reader.readLine();
-    //     }
-    //     reader.close();
-    //     return treeArray;
+    /**метод read из файла с получением строки данных*/
+    public String readGetString() throws IOException {
+        String treeArray = "";
+        BufferedReader reader = new BufferedReader(new FileReader("FamilyTree.txt"));
+        String line = reader.readLine();
+        while (line != null) {
+            treeArray += line;
+            line = reader.readLine();
+        }
+        reader.close();
+        return treeArray;
 
-    // }
+    }
 
     /**метод read из файла с получением списка FamilyTree(human)*/
     public FamilyTree read() throws IOException {
