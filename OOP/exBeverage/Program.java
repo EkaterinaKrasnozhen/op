@@ -1,6 +1,6 @@
 package exBeverage;
 
-import java.util.Iterator;
+
 
 public class Program {
     public static void main(String[] args) {
@@ -8,9 +8,8 @@ public class Program {
         latte.addComponent(new Water("Вода"));
         latte.addComponent(new Beans("Зерно"));
         latte.addComponent(new Milk("Молоко"));
-        Iterator<Ingredient> iterator = latte;
-        while(iterator.hasNext()) {
-            System.out.println(iterator.next());
+        for (var ingredient : latte) {
+            System.out.println(ingredient);                 
         }
     }
 
