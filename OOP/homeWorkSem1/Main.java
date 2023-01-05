@@ -40,6 +40,5 @@ public class Main {
         for (Human human : tree) { //итерируем список
             System.out.println(human);
         }
-
     }
 }

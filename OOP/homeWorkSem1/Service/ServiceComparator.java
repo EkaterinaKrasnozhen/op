@@ -6,7 +6,7 @@ import homeWorkSem1.FamilyTree;
 
 public class ServiceComparator {
 
-    public void sortbyName1(FamilyTree humansList) { //можно передать учебную группу в качестве аргумента
+    public void sortbyName1(FamilyTree humansList) { 
         Collections.sort(humansList.getHumans());
     }
 
