@@ -18,14 +18,13 @@ public class Groups implements Iterable<Students> {
         studentList.add(student);
     }
 
+    public List<Students> getStudentList() {
+        return studentList;
+    }
 
     @Override
     public Iterator<Students> iterator() { //создаем объект класса итератор
         return new GroupsIterator(studentList);
-    }
-
-    public List<Students> getStudentList() {
-        return studentList;
     }
 
     // class GroupsIteratot implements Iterator<Students> { //вынесли в отдельный файл
