@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import homeWorkSem1.Service.FamilyTreeIterator;
+
+import java.util.Collections;
+
 public class FamilyTree implements Serializable, Iterable<Human> {
     
     private List<Human> humans;

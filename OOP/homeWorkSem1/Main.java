@@ -1,10 +1,8 @@
 package homeWorkSem1;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
+import homeWorkSem1.Service.ServiceComparator;
 
 public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
@@ -18,20 +16,30 @@ public class Main {
         // Human human8 = new Human("Sviatoslav", 3, Gender.Male, human6, human5);
         int index=0;
         FamilyTree tree = new FamilyTree();
+        
         Human human1 = new Human("Irina", 68, Gender.Female, null, null, index++);
         Human human2 = new Human("Leonid", 69, Gender.Male, null, null, index++);
-        System.out.println(human1);
-        System.out.println(human2);
 
         tree.createHuman("Liudmila", 62, Gender.Female, null, null);
         tree.createHuman("Alexander", 65, Gender.Male,null, null);
         tree.createHuman("Kate", 36, Gender.Female, human2, human1);
 
+        System.out.println(tree); //список с id++
+        
+        ServiceComparator sc = new ServiceComparator();
+        sc.sortbyName1(tree);// сортировка по имени
+        System.out.println(tree);//вывели отсортированный список по имени
+
+        sc.sortById(tree);//сортировка по id
         System.out.println(tree);
-        
 
+        sc.sortByAge(tree); //сортировка по age
+        System.out.println(tree);
 
-        
+        System.out.println("_-_-_");
+        for (Human human : tree) { //итерируем список
+            System.out.println(human);
+        }
 
     }
 }

@@ -71,6 +71,11 @@ public class Human implements Comparable<Human> {
         return age;
     }
 
+    /** Узнать ID */
+    public int getId() {
+        return id;
+    }
+
     /**Узнать пол */
     public Gender isGender() {
         return gender;
