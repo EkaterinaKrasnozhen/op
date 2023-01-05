@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Human {
+public class Human implements Comparable<Human> {
     
     private String name;
     private int age;
@@ -12,14 +12,16 @@ public class Human {
     private Human mother;
     public List<Human> children = new ArrayList<>();
     private Gender gender;
+    private int id;
     
     /**Создание нового объекта */
-    public Human(String name, int age, Gender gender, Human father, Human mother) {
+    public Human(String name, int age, Gender gender, Human father, Human mother, int id) {
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.father = father;
         this.mother = mother;
+        this.id = ++id;
           
     }
 
@@ -56,7 +58,7 @@ public class Human {
     /**Переопределение метода toString */
     @Override
     public String toString() {
-        return "Name: " + name + ", Age: " + age + ", Gender: " + gender + "\n";
+        return "id: " + id + ", Name: " + name + ", Age: " + age + ", Gender: " + gender;
     }
 
     /**Узнать имя */
@@ -117,5 +119,11 @@ public class Human {
     /**Задать список детей для human */
     public void setChildren(List<Human> children) {
         this.children = children;
+    }
+
+    /**сортировка по имени */
+    @Override
+    public int compareTo(Human o) {
+        return name.compareTo(o.getName());
     }
 }

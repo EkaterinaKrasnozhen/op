@@ -19,7 +19,7 @@ public class Main {
             System.out.println(student);
         }
 
-        service.sortById();;
+        service.sortById();
         System.out.println();
 
         for (Students student : group) {//вывели отсортированный список по id

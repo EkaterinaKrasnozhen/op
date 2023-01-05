@@ -47,7 +47,7 @@ public class TxtHander implements Writeble {
 
         FamilyTree tree = new FamilyTree();
         for (int index = 1; index < result.length-2;) {   
-            Human human = new Human(result[index], Integer.parseInt(result[index+2]), Gender.valueOf(null, line), null, null);
+            Human human = new Human(result[index], Integer.parseInt(result[index+2]), Gender.valueOf(null, line), null, null, Integer.parseInt(result[index+5]));
             tree.add(human);
             index +=6;    
         }
