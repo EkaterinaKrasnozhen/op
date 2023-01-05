@@ -12,7 +12,7 @@ public class Main {
             System.out.println(student);
         }
 
-        service.sortbyName();;
+        service.sortbyName();
         System.out.println();
 
         for (Students student : group) {//вывели отсортированный список по имени алфавит
