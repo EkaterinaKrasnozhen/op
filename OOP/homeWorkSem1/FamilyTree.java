@@ -11,7 +11,8 @@ public class FamilyTree implements Serializable{
     private Human mother;
     private List<Human> children = new ArrayList<>();
 
-    private Writeble fileHandler;
+    private Writeble fileHandler; //работа с файлами
+ 
     
     /**Инициализация humans */
     public FamilyTree(List<Human> humans) {
