@@ -21,7 +21,7 @@ public class Groups implements Iterable<Students> {
 
     @Override
     public Iterator<Students> iterator() { //создаем объект класса итератор
-        return new GroupsIteratot(studentList);
+        return new GroupsIterator(studentList);
     }
 
     public List<Students> getStudentList() {

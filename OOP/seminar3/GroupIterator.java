@@ -3,13 +3,13 @@ package seminar3;
 import java.util.Iterator;
 import java.util.List;
 
-class GroupsIteratot implements Iterator<Students> {
+class GroupsIterator implements Iterator<Students> {
 
     private int index;
     private List<Students> studentList;
 
 
-    public GroupsIteratot(List<Students> studentList) {//получаем лист студентов и с ним работаем
+    public GroupsIterator(List<Students> studentList) {//получаем лист студентов и с ним работаем
         this.studentList = studentList;
     }
 
