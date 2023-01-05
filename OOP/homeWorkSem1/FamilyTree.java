@@ -1,15 +1,17 @@
 package homeWorkSem1;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FamilyTree implements Serializable{
     
-    List<Human> humans;
+    private List<Human> humans;
     private Human father;
     private Human mother;
-    List<Human> children = new ArrayList<>();
+    private List<Human> children = new ArrayList<>();
 
+    private Writeble fileHandler;
     
     /**Инициализация humans */
     public FamilyTree(List<Human> humans) {
@@ -49,8 +51,8 @@ public class FamilyTree implements Serializable{
         return "\n" + humans + " ";
     }
 
-    Writeble fileSaver;
-    public void save(Serializable serializable) {
-        fileSaver.save(serializable);
+    /** сохранение */
+    public void save(Serializable serializable) throws IOException {
+        fileHandler.save(serializable);
     }
 }

@@ -8,17 +8,13 @@ public class Human {
     
     private String name;
     private int age;
-    private boolean gender;
     public Human father;
     private Human mother;
     public List<Human> children = new ArrayList<>();
-
-    enum Gender {
-        Male, Female
-    }
+    private Gender gender;
     
     /**Создание нового объекта */
-    public Human(String name, int age, boolean gender, Human father, Human mother) {
+    public Human(String name, int age, Gender gender, Human father, Human mother) {
         this.name = name;
         this.age = age;
         this.gender = gender;
@@ -60,8 +56,7 @@ public class Human {
     /**Переопределение метода toString */
     @Override
     public String toString() {
-        String temp = gender ? "male" : "female";
-        return "Name: " + name + ", Age: " + age + ", Gender: " + temp + "\n";
+        return "Name: " + name + ", Age: " + age + ", Gender: " + gender + "\n";
     }
 
     /**Узнать имя */
@@ -75,7 +70,7 @@ public class Human {
     }
 
     /**Узнать пол */
-    public boolean isGender() {
+    public Gender isGender() {
         return gender;
     }
 
@@ -105,7 +100,7 @@ public class Human {
     }
 
     /**Задать пол */
-    public void setGender(boolean gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 
