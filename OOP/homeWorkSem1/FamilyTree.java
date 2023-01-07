@@ -7,7 +7,6 @@ import java.util.List;
 
 import homeWorkSem1.Service.FamilyTreeIterator;
 
-import java.util.Collections;
 
 public class FamilyTree implements Serializable, Iterable<Human> {
     
