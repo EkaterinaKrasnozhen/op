@@ -1,4 +1,4 @@
-package seminar3;
+package seminar_3;
 
 import java.util.Collections;
 

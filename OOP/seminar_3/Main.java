@@ -1,8 +1,8 @@
-package seminar3;
+package seminar_3;
 
 public class Main {
     public static void main(String[] args) {
-        Groups group = new Groups();
+        Groups<Students> group = new Groups<>();
         Service service = new Service(group);
         service.createStudent("Катя");
         service.createStudent("Паша");

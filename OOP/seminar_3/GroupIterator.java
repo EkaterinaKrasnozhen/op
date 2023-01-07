@@ -1,15 +1,15 @@
-package seminar3;
+package seminar_3;
 
 import java.util.Iterator;
 import java.util.List;
 
-class GroupsIterator implements Iterator<Students> {
+class GroupsIterator<T> implements Iterator<T> {
 
     private int index;
-    private List<Students> studentList;
+    private List<T> studentList;
 
 
-    public GroupsIterator(List<Students> studentList) {//получаем лист студентов и с ним работаем
+    public GroupsIterator(List<T> studentList) {//получаем лист студентов и с ним работаем
         this.studentList = studentList;
     }
 
@@ -19,7 +19,7 @@ class GroupsIterator implements Iterator<Students> {
     }
 
     @Override
-    public Students next() {
+    public T next() {
         return studentList.get(index++);
     }
 }

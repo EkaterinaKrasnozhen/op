@@ -1,4 +1,4 @@
-package seminar3;
+package seminar_3;
 
 public class Task1 {
     //mvnrepository - библиотеки maven, вставить в pom file
