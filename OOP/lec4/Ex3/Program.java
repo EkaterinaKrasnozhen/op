@@ -13,6 +13,11 @@ public class Program {
         Repository<VideoContent> videoStorage = new Repository<>("videoStorage");
         videoStorage.add(new VideoContent("Film1.wmv"));
         videoStorage.add(new VideoContent("Film2.3gp"));
+       
+        Repository<VideoContent> videoStorage2 = new Repository<>("videoStorage2");
+        videoStorage2.add(new VideoContent("Film3.wmv"));
+        videoStorage2.add(new VideoContent("Film4.3gp"));
+        
 
         for (int index = 0; index < videoStorage.count(); index++) {
             System.out.println(videoStorage.get(index));
@@ -24,6 +29,12 @@ public class Program {
 
         for (Content element : videoStorage) {
             System.out.println(element);
+        }
+
+        System.out.println("-----");
+        videoStorage.merge(videoStorage2);
+        for (Content elem : videoStorage) {
+            System.out.println(elem);
         }
     }
 }

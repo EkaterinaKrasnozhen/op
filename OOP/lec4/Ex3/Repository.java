@@ -28,6 +28,12 @@ public class Repository <T extends Content> implements Iterable<T> { //проп�
         return ds.get(index);
     }
 
+    public void merge(Repository<T> list) {
+        for (T element : list) {
+            ds.add(element);
+        }
+    }
+
     @Override
     public Iterator<T> iterator() {
         return new IteratorContent(ds);
