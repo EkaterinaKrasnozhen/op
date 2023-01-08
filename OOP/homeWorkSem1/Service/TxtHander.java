@@ -1,10 +1,13 @@
-package homeWorkSem1;
+package homeWorkSem1.Service;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Serializable;
+
+import homeWorkSem1.FamilyTree;
+import homeWorkSem1.Human;
 
 
 public class TxtHander implements Writeble {

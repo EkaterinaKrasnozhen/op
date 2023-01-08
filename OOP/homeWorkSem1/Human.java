@@ -3,6 +3,8 @@ package homeWorkSem1;
 import java.util.ArrayList;
 import java.util.List;
 
+import homeWorkSem1.Service.Gender;
+
 
 public class Human implements Comparable<Human> {
     
