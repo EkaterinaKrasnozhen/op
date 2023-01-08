@@ -23,7 +23,7 @@ public class Human implements Comparable<Human> {
         this.gender = gender;
         this.father = father;
         this.mother = mother;
-        this.id = ++id;
+        this.id = id;
           
     }
 
