@@ -6,7 +6,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import homeWorkSem1.Service.FamilyTreeIterator;
-import homeWorkSem1.Service.Gender;
 import homeWorkSem1.Service.Writeble;
 
 
@@ -15,10 +14,6 @@ public class FamilyTree<T extends Human> implements Serializable, Iterable<T> {
     private List<T> humans;
     private Human father;
     private Human mother;
-    private static int id;
-    //private List<Human> children = new ArrayList<>();
-
-    private Writeble fileHandler; //работа с файлами
  
     
     /**Инициализация humans */
@@ -42,27 +37,6 @@ public class FamilyTree<T extends Human> implements Serializable, Iterable<T> {
         } 
     }
 
-    /**Создать Human с id и добавить в список humans */
-    // public void createHuman(String name, int age, Gender gender, T father, T mother) {
-    //     T human = new Human(name, age, gender, father, mother, id++);
-    //     humans.add(human);
-    //     if (father != null) {
-    //         father.children.add(human);  
-    //     }
-    //     if (mother != null)  {
-    //         mother.children.add(human);
-    //     } 
-    // }
-
-    public void createHuman(T human) {
-        humans.add(human);
-        if (father != null) {
-            father.children.add(human);  
-        }
-        if (mother != null)  {
-            mother.children.add(human);
-        } 
-    }
 
     //*возвращает список humans */
     public List<T> getHumans() {
@@ -86,11 +60,7 @@ public class FamilyTree<T extends Human> implements Serializable, Iterable<T> {
         return "\n" + humans + " ";
     }
 
-    /** сохранение */
-    public void save(Serializable serializable) throws IOException {
-        fileHandler.save(serializable);
-    }
-
+    
     //* создаем объект кдасса итератор */
     @Override
     public Iterator<T> iterator() {

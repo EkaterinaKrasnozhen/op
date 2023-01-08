@@ -12,7 +12,7 @@ import java.io.Serializable;
 import homeWorkSem1.FamilyTree;
 import homeWorkSem1.Human;
 
-public class SerializeHandler<T extends FamilyTree<Human> > implements Serializable, Writeble {
+public class SerializeHandler<T extends FamilyTree<Human> > implements Serializable, Writeble<T> {
 
     ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 
