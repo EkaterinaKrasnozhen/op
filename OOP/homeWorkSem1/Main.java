@@ -22,21 +22,22 @@ public class Main {
         tree.add(human3);
         tree.add(human4);
         tree.add(human5);
-        System.out.println(tree); //список с id++
+        System.out.println(human2.getChildren());
+        // System.out.println(tree); //список с id++
         
-        Service<Human> sc = new Service<>();
-        sc.sortbyName1(tree);// сортировка по имени
-        System.out.println(tree);//вывели отсортированный список по имени
+        // Service<Human> sc = new Service<>();
+        // sc.sortbyName1(tree);// сортировка по имени
+        // System.out.println(tree);//вывели отсортированный список по имени
 
-        sc.sortById(tree);//сортировка по id
-        System.out.println(tree);
+        // sc.sortById(tree);//сортировка по id
+        // System.out.println(tree);
 
-        sc.sortByAge(tree); //сортировка по age
-        System.out.println(tree);
+        // sc.sortByAge(tree); //сортировка по age
+        // System.out.println(tree);
 
-        System.out.println("_-_-_");
-        for (Human human : tree) { //итерируем список
-            System.out.println(human);
-        }
+        // System.out.println("_-_-_");
+        // for (Human human : tree) { //итерируем список
+        //     System.out.println(human);
+        // }
     }
 }
