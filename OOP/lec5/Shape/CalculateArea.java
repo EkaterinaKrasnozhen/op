@@ -18,7 +18,7 @@ public class CalculateArea implements Calculate {
     /**
      * RefInt
      */
-    private class RefInt {
+    private class RefInt { //класс внутри класса для примера 
         public double value;
 
         public RefInt(double ident) {
