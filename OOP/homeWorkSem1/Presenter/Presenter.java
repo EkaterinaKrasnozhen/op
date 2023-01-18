@@ -2,8 +2,6 @@ package homeWorkSem1.Presenter;
 
 import java.util.List;
 
-import homeWorkSem1.FamilyTree;
-import homeWorkSem1.Human;
 import homeWorkSem1.Menu.Menu;
 import homeWorkSem1.Option.*;
 
@@ -14,7 +12,7 @@ public class Presenter {
     View view = new View();
     Menu menu = new Menu();
     
-    public List<Option> buttonClick() {
+    public List<Option> presentMenu() {
         menu.add(new Add<>());
         menu.add(new GetTree<>());
         menu.add(new GetGrands<>());
@@ -22,7 +20,10 @@ public class Presenter {
         menu.add(new SetFather<>());
         menu.add(new SetMother<>());
         List<Option> listOp = menu.getCommandList();
-        view.getMenu(listOp);
         return listOp;
+    }
+    
+    public  void buttonClick(List<Option> listOp) {
+        view.getMenu(listOp);    
     }
 }
