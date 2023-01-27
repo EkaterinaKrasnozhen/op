@@ -1,13 +1,16 @@
 package homeWorkSem1.View;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-import homeWorkSem1.Option.Option;
+import homeWorkSem1.Service.Gender;
 
 public class View {
     Scanner in = new Scanner(System.in);
+
+    Gender gend;
+
+    Gender res;
+
 
     /**Получаем выбор пользователя */
     public int getValue(String title) {
@@ -15,12 +18,34 @@ public class View {
         return in.nextInt();
     }
 
-
-    /**Демонстрация меню пользователю */
-    public void getMenu(List<Option> commandList) {
-        for (int index = 0; index < commandList.size(); index++) {
-            System.out.println(index+1 + ": " + commandList.get(index).description());
-        }
+    public String getInfo(String title) {
+        System.out.printf("%s ", title);
+        return in.nextLine();
     }
+
+    public Gender getGender(String title) {
+        System.out.printf("%s ", title);
+        String g = in.next();
+        
+        for (Gender gender : Gender.values()) {
+            if (gender.getGender1() == g) {
+                gend = Gender.Female;
+            }
+            else gend = Gender.Male;
+        }
+        return res;
+    }
+
+    public void answer(String title) {
+        System.out.printf("%s", title);
+    }
+
+
+    // /**Демонстрация меню пользователю */
+    // public void getMenu(List<Option> commandList) {
+    //     for (int index = 0; index < commandList.size(); index++) {
+    //         System.out.println(index+1 + ": " + commandList.get(index).description());
+    //     }
+    // }
 
 }

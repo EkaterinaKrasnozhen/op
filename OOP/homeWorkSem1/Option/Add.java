@@ -1,30 +1,26 @@
 package homeWorkSem1.Option;
 
 import java.io.Serializable;
-import java.util.Scanner;
 
 import homeWorkSem1.FamilyTree;
 import homeWorkSem1.Human;
-
+import homeWorkSem1.Presenter.Presenter;
 import homeWorkSem1.Service.Gender;
 
 public class Add <T extends Human> implements Serializable, Option {
 
     int index;
+    //Gender gender1;
 
+    Gender gend;
     @Override
-    public void execute(FamilyTree<Human> tree) {
-        Scanner iScanner = new Scanner(System.in);
-        System.out.println("Введите имя: ");
-        String name = iScanner.nextLine();
-        System.out.println("Возраст: ");
-        int age = iScanner.nextInt();
-        System.out.println("Введите пол Male или Female: ");
-        String gender = iScanner.nextLine();
-        Human human9 = new Human(name, age, Gender.valueOf(gender), null, null, index++);//чтобы не вводить сразу много данных
+    public void execute(FamilyTree<Human> tree, Presenter presenter) {
+        String name = presenter.getInfoFromUser("Введите имя: ");
+        int age = presenter.getIntFromUser("Возраст: ");
+        Gender gender1 = presenter.getGender("Введите пол Male или Female: ");
+        Human human9 = new Human(name, age, gender1,null, null, index++);
         tree.add(human9);
-        iScanner.close();
-        System.out.println("New Human is created and added to FamilyTree");
+        presenter.answerToUser("New Human is created and added to FamilyTree");
     }
 
     @Override

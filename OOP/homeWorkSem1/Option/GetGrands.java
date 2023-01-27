@@ -3,25 +3,46 @@ package homeWorkSem1.Option;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 import homeWorkSem1.FamilyTree;
 import homeWorkSem1.Human;
+import homeWorkSem1.Presenter.Presenter;
 
 public class GetGrands<T extends Human> implements Serializable, Option {
-    Scanner iScanner = new Scanner(System.in);
 
     @Override
-    public void execute(FamilyTree<Human> tree) {
-        System.out.println("Enter Name of human: ");
-        String getName = iScanner.nextLine();
-        List<Human> res = tree.getHumanbyName(getName);
-        List<Human> grands = new ArrayList<>();
-        for (Human human : res) {
-            grands = human.getGrands();
+    public void execute(FamilyTree<Human> tree, Presenter presenter) {
+
+        String findByName = presenter.getInfoFromUser("Enter name of Human, to find Grands: ");
+        List<Human> list = new ArrayList<>();
+        List<Human> humans = tree.getHumans();
+        try {
+            for (Human human : humans ) {
+                if (findByName.equals(human.getName())) {
+                    list.add(human.getFather().getFather());
+                    list.add(human.getFather().getMother());
+                    list.add(human.getMother().getFather());
+                    list.add(human.getMother().getMother());
+                    if (human.getFather().getFather() == null) {
+                        presenter.answerToUser("дедушки по папиной линии нет");
+                    }
+                    else if (human.getFather().getMother() == null) {
+                        presenter.answerToUser("бабушки по папиной линии нет");
+                    }
+                    else if (human.getMother().getFather() == null) {
+                        presenter.answerToUser("дедушки по маминой линии нет");
+                    }
+                    else if (human.getMother().getMother() == null) {
+                        presenter.answerToUser("бабушки по маминой линии нет");
+                    }
+                
+                }
+            }
         }
-        System.out.printf("Grands of %s are: \n%s", getName, grands);
-        
+        catch (Exception e) {
+            System.out.println("ошибка");
+        }
+        presenter.answerToUser("Grands are: "+ list);    
     }
 
     @Override

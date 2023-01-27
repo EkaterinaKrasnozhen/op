@@ -31,15 +31,12 @@ public class Main {
         tree.add(human7);
         tree.add(human8);
 
-        View view = new View();
         Presenter pr = new Presenter();
         
         List<Option> listOp = pr.presentMenu();// показываем пользователю меню
 
         while (true) {
-            pr.buttonClick(listOp);
-            int choice = view.getValue("Choose № of menu item");// получаем выбор пользователя
-            listOp.get(choice - 1).execute(tree);// передаем выбор пользователя, FamilyTree и запускаем нужную программу
+            pr.buttonClick(listOp, tree);
         }    
     }
 }

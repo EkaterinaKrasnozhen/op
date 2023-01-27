@@ -14,7 +14,7 @@ public class Main {
 
         List<Fax> phones2 = new ArrayList<Fax>();//List<Fax> phones2 = new ArrayList<IPhone>(); не получилось прописать
 
-        phones1.add(new IPhone());
+        phones2.add(new IPhone());
 
     }
     
