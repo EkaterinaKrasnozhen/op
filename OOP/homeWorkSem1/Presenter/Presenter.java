@@ -35,13 +35,17 @@ public class Presenter {
     
     public List<Option> presentMenu() {//создаем меню
         menu.add(new Add<>());
-        menu.add(new GetTree<>());
+        menu.add(new GetTree());
         menu.add(new GetGrands<>());
         menu.add(new GetSisBro<>());
         menu.add(new SetFather<>());
         menu.add(new SetMother<>());
         List<Option> listOp = menu.getCommandList();
         return listOp;
+    }
+
+    public void showTree(FamilyTree<Human> tree) {
+        view.showTree(tree);
     }
 
     

@@ -10,9 +10,8 @@ import homeWorkSem1.Service.Gender;
 public class Add <T extends Human> implements Serializable, Option {
 
     int index;
-    //Gender gender1;
-
     Gender gend;
+    
     @Override
     public void execute(FamilyTree<Human> tree, Presenter presenter) {
         String name = presenter.getInfoFromUser("Введите имя: ");

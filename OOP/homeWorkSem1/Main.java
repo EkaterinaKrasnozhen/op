@@ -6,7 +6,6 @@ import java.util.List;
 import homeWorkSem1.Option.Option;
 import homeWorkSem1.Presenter.Presenter;
 import homeWorkSem1.Service.Gender;
-import homeWorkSem1.View.View;
 
 public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {

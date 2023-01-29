@@ -2,6 +2,8 @@ package homeWorkSem1.View;
 
 import java.util.Scanner;
 
+import homeWorkSem1.FamilyTree;
+import homeWorkSem1.Human;
 import homeWorkSem1.Service.Gender;
 
 public class View {
@@ -38,6 +40,10 @@ public class View {
 
     public void answer(String title) {
         System.out.printf("%s", title);
+    }
+
+    public void showTree(FamilyTree<Human> tree) {
+        System.out.println(tree);
     }
 
 
