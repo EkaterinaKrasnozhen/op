@@ -7,7 +7,6 @@ import homeWorkSem1.Human;
 import homeWorkSem1.Menu.Menu;
 import homeWorkSem1.Option.*;
 import homeWorkSem1.Service.CreateTree;
-import homeWorkSem1.Service.Gender;
 import homeWorkSem1.View.View;
 
 public class Presenter {
@@ -22,8 +21,7 @@ public class Presenter {
     }
 
     public FamilyTree<Human> createTree() {
-        FamilyTree<Human> tree = newTree.createTree();
-        return tree;
+        return newTree.createTree();
     }
 
     
