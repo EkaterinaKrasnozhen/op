@@ -1,10 +1,13 @@
 package homeWorkSem1.Service;
 
 public enum Gender {
+
     Male("Male"), Female("Female");
 
     private String string;
-    private Gender (String string) {
+    Gender gend;
+
+    private Gender(String string) {
         this.string = string;
     }
 
@@ -12,17 +15,13 @@ public enum Gender {
         return string;
     }
 
-    // public String getUrl() {
-    //     return url;
-    // }
-
-    // Gender g;
-    // public Gender getGender(String choice) { 
-    //     for (Gender gend : Gender.values()) {
-    //         if (gend.valueOf(choice)) {
-    //             return gend;
-    //         }    
-    //     }
-             
-    // }
+    public Gender setGender(String g) {
+        for (Gender gender : Gender.values()) {
+            if (gender.getGender1() == g) {
+                gend = Gender.Female;
+            }
+            else gend = Gender.Male;
+        }
+        return gend;   
+    }
 }

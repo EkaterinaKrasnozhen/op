@@ -35,9 +35,9 @@ public class FamilyTree<T extends Human> implements Serializable, Iterable<T> {
     }
 
     /**Поиск по имени */
-    public List<T> getHumanbyName(String findByName) {
-        List<T> list = new ArrayList<>();
-        for (T human : humans ) {
+    public List<Human> getHumanbyName(String findByName) {
+        List<Human> list = new ArrayList<>();
+        for (Human human : humans ) {
             if (findByName.equals(human.getName())) {
                 list.add(human);
             }

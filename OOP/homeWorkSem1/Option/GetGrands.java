@@ -3,17 +3,24 @@ package homeWorkSem1.Option;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import homeWorkSem1.FamilyTree;
 import homeWorkSem1.Human;
-import homeWorkSem1.Presenter.Presenter;
 
 public class GetGrands<T extends Human> implements Serializable, Option {
 
-    @Override
-    public void execute(FamilyTree<Human> tree, Presenter presenter) {
+    Scanner scanner = new Scanner(System.in);
 
-        String findByName = presenter.getInfoFromUser("Enter name of Human, to find Grands: ");
+    @Override
+    public String description() {
+        return String.format("Get Grands of Human");
+    }
+
+    @Override
+    public void exucute(FamilyTree<Human> tree) {
+        System.out.printf("Введите имя человека ");
+        String findByName = scanner.nextLine();
         List<Human> list = new ArrayList<>();
         List<Human> humans = tree.getHumans();
         try {
@@ -24,16 +31,16 @@ public class GetGrands<T extends Human> implements Serializable, Option {
                     list.add(human.getMother().getFather());
                     list.add(human.getMother().getMother());
                     if (human.getFather().getFather() == null) {
-                        presenter.answerToUser("дедушки по папиной линии нет");
+                        System.out.printf("дедушки по папиной линии нет");
                     }
                     else if (human.getFather().getMother() == null) {
-                        presenter.answerToUser("бабушки по папиной линии нет");
+                        System.out.printf("бабушки по папиной линии нет");
                     }
                     else if (human.getMother().getFather() == null) {
-                        presenter.answerToUser("дедушки по маминой линии нет");
+                        System.out.printf("дедушки по маминой линии нет");
                     }
                     else if (human.getMother().getMother() == null) {
-                        presenter.answerToUser("бабушки по маминой линии нет");
+                        System.out.printf("бабушки по маминой линии нет");
                     }
                 
                 }
@@ -42,12 +49,6 @@ public class GetGrands<T extends Human> implements Serializable, Option {
         catch (Exception e) {
             System.out.println("ошибка");
         }
-        presenter.answerToUser("Grands are: "+ list);    
-    }
-
-    @Override
-    public String description() {
-        return String.format("Get Grands of Human");
-    }
-    
+        System.out.printf("Grands are: "+ list);          
+    }    
 }

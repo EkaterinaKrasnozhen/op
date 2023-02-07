@@ -6,6 +6,7 @@ import homeWorkSem1.FamilyTree;
 import homeWorkSem1.Human;
 import homeWorkSem1.Menu.Menu;
 import homeWorkSem1.Option.*;
+import homeWorkSem1.Service.CreateTree;
 import homeWorkSem1.Service.Gender;
 import homeWorkSem1.View.View;
 
@@ -13,39 +14,16 @@ public class Presenter {
     
     View view = new View();
     Menu menu = new Menu();
+    CreateTree newTree = new CreateTree();
 
-    public String getInfoFromUser(String title) {
-        String findByName = view.getInfo(title);
-        return findByName;
+
+    public List<Option> getMenu(){
+        return menu.presentMenu();
     }
 
-    public int getIntFromUser(String title) {
-        int data = view.getValue(title);
-        return data;
-    }
-
-    public void answerToUser(String title) {
-        view.answer(title);
-    }
-
-    public Gender getGender(String title) {
-        Gender gender = view.getGender(title);
-        return gender;
-    }
-    
-    public List<Option> presentMenu() {//создаем меню
-        menu.add(new Add<>());
-        menu.add(new GetTree());
-        menu.add(new GetGrands<>());
-        menu.add(new GetSisBro<>());
-        menu.add(new SetFather<>());
-        menu.add(new SetMother<>());
-        List<Option> listOp = menu.getCommandList();
-        return listOp;
-    }
-
-    public void showTree(FamilyTree<Human> tree) {
-        view.showTree(tree);
+    public FamilyTree<Human> createTree() {
+        FamilyTree<Human> tree = newTree.createTree();
+        return tree;
     }
 
     
@@ -55,6 +33,6 @@ public class Presenter {
             view.answer(index+1 + ": " + listOp.get(index).description() + "\n");
         }
         int choice = view.getValue("Choose № of menu item");// получаем выбор пользователя
-        listOp.get(choice - 1).execute(tree, new Presenter());// передаем выбор пользователя, FamilyTree и запускаем нужную программу  
+        listOp.get(choice - 1).exucute(tree);// передаем выбор пользователя, FamilyTree и запускаем нужную программу  
     }
 }

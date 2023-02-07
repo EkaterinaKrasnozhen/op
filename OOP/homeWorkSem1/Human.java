@@ -1,12 +1,13 @@
 package homeWorkSem1;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import homeWorkSem1.Service.Gender;
 
 
-public class Human implements Comparable<Human> {
+public class Human implements Comparable<Human>, Serializable {
     
     private String name;
     private int age;
@@ -23,8 +24,7 @@ public class Human implements Comparable<Human> {
         this.gender = gender;
         this.father = father;
         this.mother = mother;
-        this.id = id;
-          
+        this.id = id;      
     }
 
     /**добавление в список детей */
